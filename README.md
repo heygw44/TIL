@@ -12,7 +12,6 @@
 - [알고리즘](https://github.com/gwoprk98/TIL/blob/master/c%2B%2B/stl%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.md)
 
 ## ProblemSolve
-- [실전 알고리즘]
   - [기초 코드 작성요령I](https://github.com/cayman031/TIL/blob/master/problemsolve/%EC%8B%A4%EC%A0%84%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EA%B8%B0%EC%B4%88%20%EC%BD%94%EB%93%9C%20%EC%9E%91%EC%84%B1%20%EC%9A%94%EB%A0%B9I.md)
   - [기초 코드 작성요령II](https://github.com/cayman031/TIL/blob/master/problemsolve/%EC%8B%A4%EC%A0%84%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EA%B8%B0%EC%B4%88%20%EC%BD%94%EB%93%9C%20%EC%9E%91%EC%84%B1%20%EC%9A%94%EB%A0%B9II.md)
 ## Spring
