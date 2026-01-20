@@ -1,49 +1,61 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int board[1002][1002];
-int dist[1002][1002];
-int n, m;
-int dx[4] = {1, 0, -1, 0};
-int dy[4] = {0, 1, 0, -1};
+
+int m, n, h;                  // m: cols(열), n: rows(행), h: height(층)
+int board[102][102][102];     // board[z][x][y]
+
+int dz[6] = {1, -1, 0, 0, 0, 0};
+int dx[6] = {0, 0, 1, -1, 0, 0};
+int dy[6] = {0, 0, 0, 0, 1, -1};
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
 
-    queue<pair<int,int>> q;
+  cin >> m >> n >> h;
 
-    cin >> m >> n; 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            cin >> board[i][j];
-            if (board[i][j] == 1) q.push({i,j});
-            if (board[i][j] == 0) dist[i][j] = -1;
-        }
+  queue<tuple<int,int,int>> q; // (z, x, y)
+
+  for (int z = 0; z < h; z++) {
+    for (int x = 0; x < n; x++) {
+      for (int y = 0; y < m; y++) {
+        cin >> board[z][x][y];
+        if (board[z][x][y] == 1) q.push({z, x, y});
+      }
     }
+  }
 
-    while(!q.empty()) {
-        auto cur = q.front(); q.pop();
-        for (int dir = 0; dir < 4; dir++) { 
-            int nx = cur.first + dx[dir];
-            int ny = cur.second + dy[dir];
+  while (!q.empty()) {
+    auto [z, x, y] = q.front();
+    q.pop();
 
-            if (nx >= n || nx < 0 || ny >= m || ny < 0) continue;
-            if (dist[nx][ny] >= 0) continue; 
-            dist[nx][ny] = dist[cur.first][cur.second] + 1;
-            q.push({nx, ny});
-        }
+    for (int dir = 0; dir < 6; dir++) {
+      int nz = z + dz[dir];
+      int nx = x + dx[dir];
+      int ny = y + dy[dir];
+
+      if (nz < 0 || nz >= h || nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
+      if (board[nz][nx][ny] != 0) continue; 
+
+      board[nz][nx][ny] = board[z][x][y] + 1;
+      q.push({nz, nx, ny});
     }
+  }
 
-    int ans = 0;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            if (dist[i][j] == -1) { 
-                cout << -1;
-                return 0;
-            }
-            ans = max(ans, dist[i][j]);
+  int mx = 1;
+  for (int z = 0; z < h; z++) {
+    for (int x = 0; x < n; x++) {
+      for (int y = 0; y < m; y++) {
+        if (board[z][x][y] == 0) {
+          cout << -1 << "\n";
+          return 0;
         }
+        mx = max(mx, board[z][x][y]);
+      }
     }
-    cout << ans;
+  }
+
+  cout << mx - 1 << "\n";
+  return 0;
 }
