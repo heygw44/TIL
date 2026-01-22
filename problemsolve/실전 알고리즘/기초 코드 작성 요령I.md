@@ -5,49 +5,55 @@
 ## 시간 복잡도
 
 ### 빅오 표기법
+
 입력의 크기(N)가 커질 때 연산 횟수가 어떻게 증가하는지를 나타낸다.
 $O(1)<O(logN)<O(N)<O(NlogN)<O(N^2)<O(2^N)<O(N!)$
 
 - 시간 제한과 N의 크기: 주어진 시간 제한(보통 1초) 내에 통과하기 위한 N의 대략적인 한계는 다음과 같다.
-$$
-\begin{aligned}
-O(N) &: N \le 1{,}000\text{만} \sim 1\text{억} \\
-O(N \log N) &: N < 10\text{만} \sim 100\text{만} \\
-O(N^2) &: N \le 2{,}000 \sim 5{,}000 \\
-O(N^3) &: N \le 500 \\
-O(2^N) &: N \le 20 \\
-O(N!) &: N \le 10
-\end{aligned}
-$$
+  $$
+  \begin{aligned}
+  O(N) &: N \le 1{,}000\text{만} \sim 1\text{억} \\
+  O(N \log N) &: N < 10\text{만} \sim 100\text{만} \\
+  O(N^2) &: N \le 2{,}000 \sim 5{,}000 \\
+  O(N^3) &: N \le 500 \\
+  O(2^N) &: N \le 20 \\
+  O(N!) &: N \le 10
+  \end{aligned}
+  $$
 
 ## 공간 복잡도
+
 - 메모리 제한: 코딩테스트에서는 보통 128MB ~ 512MB 정도로 주어진다.
 - 데이터 개수 가늠하기: int형 변수를 기준으로 계산하자.
 - 일반적으로 메모리 제한때문에 문제를 못푸는 경우는 드물지만, 크기가 1억이 넘어가는 배열을 선언해야하는 경우에는 다른 방법을 고려하도록 하자.
 
 ## 정수 자료형
+
 - 자료형 선택
-$$
-\begin{aligned}
-\texttt{short}\ (2\text{byte}) & \\
-\texttt{int}\ (4\text{byte}) &: \ \text{약 } -21\text{억} \sim +21\text{억} \\
-\texttt{long long}\ (8\text{byte}) &: \ \text{약 } -9 \times 10^{18} \sim +9 \times 10^{18}
-\end{aligned}
-$$
+
+  $$
+  \begin{aligned}
+  \texttt{short}\ (2\text{byte}) & \\
+  \texttt{int}\ (4\text{byte}) &: \ \text{약 } -21\text{억} \sim +21\text{억} \\
+  \texttt{long long}\ (8\text{byte}) &: \ \text{약 } -9 \times 10^{18} \sim +9 \times 10^{18}
+  \end{aligned}
+  $$
 
 - Integer Overflow 주의
   - 연산 결과가 자료형의 범위를 벗어나면 쓰레기값이 저장되는 현상이다.
   - 예시: $10^9×10^9$ 연산 시 int 범위를 초과하므로 long long으로 형 변환 후 계산해야 함.
+
 ```cpp
 int a = 2000000000;
 int b = 2000000000;
 // 잘못된 예 (Overflow 발생)
-int c = a + b; 
+int c = a + b;
 // 올바른 예
 long long d = (long long)a + b;
 ```
 
 ## 실수 자료형
+
 - 자료형 선택
   - float(4byte): 유효 숫자 약 6자리
   - double(8byte): 유효 숫자 약 15자리.
