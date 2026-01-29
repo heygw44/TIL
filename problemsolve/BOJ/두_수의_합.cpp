@@ -3,7 +3,7 @@ using namespace std;
 
 int n, x;
 int arr[100001] = {};
-bool occur[200001];
+bool occur[2000001];
 
 int main() {
     ios_base::sync_with_stdio(false);
