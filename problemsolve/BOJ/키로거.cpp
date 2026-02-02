@@ -6,32 +6,34 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
 
-    int n;
-    cin >> n;
+    int t;
+    cin >> t;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < t; i++) {
         list<char> l = {};
-        auto p = l.begin();
-
         string s;
+
+        auto p = l.begin();
         cin >> s;
 
-        for (auto c:s) {
-            if (c == '<') {
-                if (p != l.begin()) p--;
-            } else if (c == '>') {
-                if (p != l.end()) p++;
-            } else if (c == '-') {
+        for (auto c : s) {
+            if (c == '-') {
                 if (p != l.begin()) {
                     p--;
                     p = l.erase(p);
                 }
-            } else {
+            }
+            else if (c == '<') {
+                if (p != l.begin()) p--;
+            }
+            else if (c == '>') {
+                if (p != l.end()) p++;
+            }
+            else {
                 l.insert(p, c);
             }
         }
-
-        for (auto a:l) cout << a;
+        for (auto c : l) cout << c;
         cout << "\n";
     }
 
