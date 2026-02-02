@@ -81,5 +81,7 @@
 - [HTTP 완벽 가이드](https://github.com/heygw44/TIL/blob/master/Network/HTTP/HTTP%20%EC%99%84%EB%B2%BD%EA%B0%80%EC%9D%B4%EB%93%9C.md)
 
 ## OOP
-
 - [DDD](https://github.com/gwoprk98/TIL/blob/master/OOP/DDD.md)
+
+## Web
+- [직렬화](https://github.com/heygw44/TIL/blob/master/Web/%EC%A7%81%EB%A0%AC%ED%99%94.md)
