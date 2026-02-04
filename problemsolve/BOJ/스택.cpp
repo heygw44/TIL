@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+    cin.tie(NULL);
 
     stack<int> st;
     int n;
@@ -15,30 +14,25 @@ int main() {
         cin >> op;
 
         if (op == "push") {
-            int x;
-            cin >> x;
-            st.push(x);
-        } else if (op == "pop") {
-            if (st.empty()) {
-                cout << -1 << "\n";
-            } else {
+            int t;
+            cin >> t;
+            st.push(t);
+        } 
+        else if (op == "pop") {
+            if (st.empty()) cout << -1 << "\n";
+            else {
                 cout << st.top() << "\n";
                 st.pop();
             }
-        } else if (op == "size") {
+        } 
+        else if (op == "size") {
             cout << st.size() << "\n";
-        } else if (op == "empty") {
-            if (st.empty()) {
-                cout << 1 << "\n";
-            } else {
-                cout << 0 << "\n";
-            }
-        }else if (op == "top") {
-            if (st.empty()) {
-                cout << -1 << "\n";
-            } else {
-                cout << st.top() << "\n";
-            }
+        } 
+        else if (op == "empty") {
+            cout << (st.empty() ? 1 : 0) << "\n";
+        } 
+        else if (op == "top") {
+            cout << (st.empty() ? -1 : st.top()) << "\n";
         }
     }
 
