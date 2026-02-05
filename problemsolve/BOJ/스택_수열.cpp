@@ -8,27 +8,27 @@ int main() {
 
     int n;
     cin >> n;
-
     stack<int> st;
+
     string ans;
+    int cnt = 1;
 
-    int cur = 1;
-
-    while (n--) {
+    while(n--) {
         int t;
         cin >> t;
-        while (cur <= t) {
-            st.push(cur++);
+
+        while(cnt <= t) {
+            st.push(cnt++);
             ans += "+\n";
         }
         if (st.top() != t) {
             cout << "NO";
             return 0;
-        } else {
-            st.pop();
-            ans += "-\n";
         }
+        st.pop();
+        ans += "-\n";
     }
 
     cout << ans;
+
 }
