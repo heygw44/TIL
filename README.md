@@ -30,6 +30,8 @@
   - [빈 생명주기 콜백](https://github.com/gwoprk98/TIL/blob/master/spring/spring/%EB%B9%88%20%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0%20%EC%BD%9C%EB%B0%B1.md)
   - [프로토타입 스코프](https://github.com/gwoprk98/TIL/blob/master/spring/spring/%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85%20%EC%8A%A4%EC%BD%94%ED%94%84.md)
   - [웹 스코프](https://github.com/gwoprk98/TIL/blob/master/spring/spring/%EC%9B%B9%20%EC%8A%A4%EC%BD%94%ED%94%84.md)
+  - [스프링 시큐리티 구조](https://github.com/heygw44/TIL/blob/main/spring/spring/Spring%20Security%20%EA%B5%AC%EC%A1%B0.md)
+  - [스프링 시큐리티 인증 메커니즘](https://github.com/heygw44/TIL/blob/main/spring/spring/Spring%20Security%20%EC%9D%B8%EC%A6%9D%20%EB%A9%94%EC%BB%A4%EB%8B%88%EC%A6%98.md)
 - [mvc](https://github.com/gwoprk98/TIL/tree/master/spring/mvc)
   - [요청매핑](https://github.com/gwoprk98/TIL/blob/master/spring/mvc/%EC%9A%94%EC%B2%AD%EB%A7%A4%ED%95%91.md)
   - [기본, 헤더조회](https://github.com/gwoprk98/TIL/blob/master/spring/mvc/%EA%B8%B0%EB%B3%B8%2C%ED%97%A4%EB%8D%94%EC%A1%B0%ED%9A%8C.md)
