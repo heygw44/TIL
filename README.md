@@ -55,6 +55,8 @@
   - [스프링 부트와 JPA 활용 - API 개발과 성능 최적화](https://github.com/gwoprk98/TIL/blob/master/spring/jpa/API%20%EA%B0%9C%EB%B0%9C%EA%B3%BC%20%EC%84%B1%EB%8A%A5%20%EC%B5%9C%EC%A0%81%ED%99%94.md)
   - [실전 스프링 데이터 JPA](https://github.com/gwoprk98/TIL/blob/master/spring/jpa/%EC%8B%A4%EC%A0%84%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20JPA.md)
   - [QueryDsl](https://github.com/gwoprk98/TIL/blob/master/spring/jpa/QueryDsl.md)
+  - [영속성 컨텍스트](https://github.com/heygw44/TIL/blob/main/spring/jpa/%EC%98%81%EC%86%8D%EC%84%B1%20%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8.md)
+  - [N+1문제](https://github.com/heygw44/TIL/blob/main/spring/jpa/N%2B1%EB%AC%B8%EC%A0%9C.md)
 - [servlet](https://github.com/gwoprk98/TIL/tree/master/spring/servlet)
   - [HttpServletRequest](https://github.com/gwoprk98/TIL/blob/master/spring/servlet/HttpServletRequest.md)
   - [요청데이터](https://github.com/gwoprk98/TIL/blob/master/spring/servlet/%EC%9A%94%EC%B2%AD%20%EB%8D%B0%EC%9D%B4%ED%84%B0.md)
